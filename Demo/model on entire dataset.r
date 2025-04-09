@@ -6,8 +6,10 @@ library(tidytext)
 library(stopwords)
 library(ggplot2)
 
-true = read.csv("C:\\temp\\News _dataset\\True.csv") %>% mutate(true=1)
-fake = read.csv("C:\\temp\\News _dataset\\Fake.csv") %>% mutate(true=0)
+#Download data from https://www.kaggle.com/datasets/emineyetm/fake-news-detection-datasets
+
+true = read.csv("News _dataset/True.csv") %>% mutate(true=1)
+fake = read.csv("News _dataset/Fake.csv") %>% mutate(true=0)
 news = rbind(true,fake) %>% mutate(articlenum=row_number())
 
 news <- news %>% 

@@ -8,6 +8,7 @@ library(stopwords)
 library(pROC)
 library(ggplot2)
 
+#Download data from https://www.kaggle.com/datasets/emineyetm/fake-news-detection-datasets
 true = read.csv("News _dataset/True.csv") %>% mutate(true=1)
 fake = read.csv("News _dataset/Fake.csv") %>% mutate(true=0)
 fake_split = read.csv("fake_split.csv")
